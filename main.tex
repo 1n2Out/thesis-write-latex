@@ -1,0 +1,55 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+
+\documentclass[degree=master]{zjgsuthesis}
+
+\input{preamble}
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+
+% 学硕中文封面
+%\input{chapters/title_cn}
+
+% 专硕中文封面需要时改用下面一行
+\input{chapters/title_cn_professional}
+
+\input{chapters/title_en}
+
+\frontmatter
+
+\input{chapters/abstract_cn}
+\input{chapters/abstract_en}
+
+\listoffigures
+\listoftables
+\tableofcontents
+
+\mainmatter
+
+\include{chapters/chapter1_introduction/chapter1}
+\include{chapters/chapter2_related_theory/chapter2}
+\include{chapters/chapter3_segmamba_segmentation/chapter3}
+\include{chapters/chapter4_deim_detection/chapter4}
+\include{chapters/chapter5_experiments/chapter5}
+\include{chapters/chapter6_conclusion/chapter6}
+
+\backmatter
+
+\bibliography{references}
+
+\appendix
+\input{chapters/achievements}
+\input{chapters/acknowledgements}
+\input{chapters/statement}
+
+% 有附录时取消下一行注释
+% \input{chapters/appendix}
+
+\end{document}
+
+
+

@@ -1,0 +1,68 @@
+%×××××××××××××××××××××××××××××××
+%信息配置页
+%×××××××××××××××××××××××××××××××
+
+% 论文基本信息配置
+% 引用各种包
+
+% 定理类环境宏包
+\usepackage{amsthm}
+% 也可以使用 ntheorem
+% \usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+
+\zjgsusetup{
+  %
+  % 数学字体
+  % math-style = GB,  % GB | ISO | TeX
+  math-font  = xits,  % stix | xits | libertinus
+}
+
+
+% 表格加脚注
+\usepackage{threeparttable}
+
+% 表格中支持跨行
+\usepackage{multirow}
+
+% 固定宽度的表格。
+% \usepackage{tabularx}
+
+% 跨页表格
+\usepackage{longtable}
+
+%设置1.5倍行距
+\usepackage{setspace}
+\setstretch{1.5}
+
+% 算法
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% 量和单位
+\usepackage{siunitx}
+
+% 参考文献使用 BibTeX + natbib 宏包
+% 顺序编码制
+\usepackage[sort]{natbib}
+\bibliographystyle{zjgsuthesis-numeric}
+
+
+% 定义所有的图片文件在 figures 子目录下
+\graphicspath{{figures/}{figures/framework/}{figures/detection/}{figures/segmentation/}}
+
+% 数学命令
+\makeatletter
+\newcommand\dif{%  % 微分符号
+  \mathop{}\!%
+  \ifzjgsu@math@style@TeX
+    d%
+  \else
+    \mathrm{d}%
+  \fi
+}
+\makeatother
+
+% hyperref 宏包在最后调用
+\usepackage{hyperref}
+
+
